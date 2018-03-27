@@ -1,0 +1,2797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrmGetMensajeError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrmGetMensajeErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FrmGetMensajeErrorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenEtiquetaCatCampos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreColumna" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenEtiquetaCatCamposResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenEtiquetaCatCamposResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenEtiquetaReporte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenEtiquetaReporteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenEtiquetaReporteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenWidth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenWidthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenWidthResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Parametro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParametroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParametroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenIdTipoCampo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenIdTipoCampoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenIdTipoCampoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValidaDirecta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValidaDirectaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenValidaDirectaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTblRelacionGen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTblRelacionGenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTblRelacionGenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenCatFormato">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenCatFormatoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenCatFormatoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenObligatorio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenObligatorioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenObligatorioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTooltip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTooltipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTooltipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenLongitud">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCampo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="catalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenLongitudResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenLongitudResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObteneTipoDeCambio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObteneTipoDeCambioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObteneTipoDeCambioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tipo_Cliente_Elimina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tipo_Cliente_EliminaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_Cliente_EliminaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tipo_Cliente_Edita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tipo_Cliente_EditaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_Cliente_EditaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selecTabla">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro01" />
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro02" />
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro03" />
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro04" />
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro05" />
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro06" />
+            <s:element minOccurs="0" maxOccurs="1" name="vParametro07" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selecTablaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selecTablaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_Edita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_EditaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fun_EditaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_Nuevo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoValida" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresValida" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_NuevoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fun_NuevoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoValida" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresValida" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_Elimina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" />
+            <s:element minOccurs="0" maxOccurs="1" name="borradoLog" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_EliminaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fun_EliminaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" />
+            <s:element minOccurs="0" maxOccurs="1" name="borradoLog" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CatGrals">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Tabla" />
+            <s:element minOccurs="0" maxOccurs="1" name="Columna" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorAdicional" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="UltActual" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdOpcion" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" />
+            <s:element minOccurs="0" maxOccurs="1" name="mj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CatGralsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CatGralsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Tabla" />
+            <s:element minOccurs="0" maxOccurs="1" name="Columna" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorAdicional" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="UltActual" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdOpcion" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" />
+            <s:element minOccurs="0" maxOccurs="1" name="mj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraeDatosConsulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strConsulta" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraeDatosConsultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraeDatosConsultaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grid_Alta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llaves" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grid_AltaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grid_AltaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llaves" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grid_Edita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llaves" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grid_EditaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grid_EditaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valores" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llaves" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grid_Elimina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llaves" />
+            <s:element minOccurs="0" maxOccurs="1" name="borradoLog" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grid_EliminaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grid_EliminaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCat" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llaves" />
+            <s:element minOccurs="0" maxOccurs="1" name="borradoLog" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_Tema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="tema" />
+            <s:element minOccurs="0" maxOccurs="1" name="output" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fun_TemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fun_TemaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="tema" />
+            <s:element minOccurs="0" maxOccurs="1" name="output" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_Alta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Factura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoPoliza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aseguradora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_vencimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_emision" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoEndoso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoDePoliza" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="iva" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoTotal" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="UUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CONFIRMARPAGO" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_AltaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FacturasSeg_AltaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_EliminaTmp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_EliminaTmpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FacturasSeg_EliminaTmpResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_SelectG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_SelectGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FacturasSeg_SelectGResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_SelectGNoM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_SelectGNoMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FacturasSeg_SelectGNoMResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_SelectFacNoAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_SelectFacNoAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FacturasSeg_SelectFacNoAutoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_Editar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poliza" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoTotal" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="PolizaTemp" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="confirmarPago" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasSeg_EditarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FacturasSeg_EditarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MonitorGeneral_Select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MonitorGeneral_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MonitorGeneral_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosFuncionalidaCobranza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParametrosFuncionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosFuncionalidaCobranzaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DatosFuncionalidaCobranzaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectEmpresasLF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectEmpresasLFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectEmpresasLFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectMarcas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectMarcasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectMarcasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectMarcasLF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectMarcasLFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectMarcasLFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAseguradorasLF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAseguradorasLFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAseguradorasLFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAseguradoras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAseguradorasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAseguradorasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectValoresLF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectValoresLFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectValoresLFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectTipoOperLF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectTipoOperLFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectTipoOperLFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectFondeadoras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectFondeadorasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectFondeadorasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaParametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MontoAut" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="FecVen" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="AforoCtontractual" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PlazoD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MesRes" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdAforo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NotaCredito" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Garantia" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Factor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AntigFac" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FacRen" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdTipoOper" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValMax" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValMin" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="RenGarantia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FecRen" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="RenFlujo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdPaga" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcentajeresid" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarcaList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="AsegList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertaParametrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaParametrosResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MontoAut" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="FecVen" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="AforoCtontractual" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PlazoD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MesRes" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdAforo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NotaCredito" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Garantia" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Factor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AntigFac" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FacRen" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdTipoOper" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValMax" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValMin" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="RenGarantia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FecRen" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="RenFlujo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdPaga" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcentajeresid" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarcaList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="AsegList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateParametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MontoAut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FecVen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AforoCtontractual" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tasa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PlazoD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MesRes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdAforo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NotaCredito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Garantia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Factor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AntigFac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacRen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdTipoOper" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValMax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValMin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RenGarantia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FecRen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RenFlujo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdPaga" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="porcentajeresid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Marcas" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asegura" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateParametrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateParametrosResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MontoAut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FecVen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AforoCtontractual" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tasa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PlazoD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MesRes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdAforo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NotaCredito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Garantia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Factor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AntigFac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacRen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdTipoOper" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValMax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValMin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RenGarantia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FecRen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RenFlujo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdPaga" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="porcentajeresid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Marcas" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asegura" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectLineasFondeadoras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectLineasFondeadorasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectLineasFondeadorasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectRemesasFondeo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectRemesasFondeoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectRemesasFondeoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectDetalleFondeo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idfondeo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectDetalleFondeoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectDetalleFondeoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idfondeo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectCreditos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idParamLF" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectCreditosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectCreditosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectCreditosGarantia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idParamLF" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectCreditosGarantiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectCreditosGarantiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectCredReemplazo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPELF" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectCredReemplazoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectCredReemplazoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaRemesa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ParamLF" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CantContartos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idContratos" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaRemesaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaRemesaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectDetalleRemesa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemesaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectDetalleRemesaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectDetalleRemesaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnexosReemplazoDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Vmes" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnexosReemplazoDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnexosReemplazoDetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guarda_Pedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresPedido" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresMovPed" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guarda_PedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Guarda_PedidoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresPedido" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValoresMovPed" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="FrmGetMensajeErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:FrmGetMensajeError" />
+  </wsdl:message>
+  <wsdl:message name="FrmGetMensajeErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:FrmGetMensajeErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenEtiquetaCatCamposSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenEtiquetaCatCampos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenEtiquetaCatCamposSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenEtiquetaCatCamposResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenEtiquetaReporteSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenEtiquetaReporte" />
+  </wsdl:message>
+  <wsdl:message name="ObtenEtiquetaReporteSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenEtiquetaReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenWidthSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenWidth" />
+  </wsdl:message>
+  <wsdl:message name="ObtenWidthSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenWidthResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParametroSoapIn">
+    <wsdl:part name="parameters" element="tns:Parametro" />
+  </wsdl:message>
+  <wsdl:message name="ParametroSoapOut">
+    <wsdl:part name="parameters" element="tns:ParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenIdTipoCampoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenIdTipoCampo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenIdTipoCampoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenIdTipoCampoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValidaDirectaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenValidaDirecta" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValidaDirectaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenValidaDirectaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTblRelacionGenSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTblRelacionGen" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTblRelacionGenSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTblRelacionGenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenCatFormatoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenCatFormato" />
+  </wsdl:message>
+  <wsdl:message name="ObtenCatFormatoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenCatFormatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenObligatorioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenObligatorio" />
+  </wsdl:message>
+  <wsdl:message name="ObtenObligatorioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenObligatorioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTooltipSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTooltip" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTooltipSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTooltipResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenLongitudSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenLongitud" />
+  </wsdl:message>
+  <wsdl:message name="ObtenLongitudSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenLongitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObteneTipoDeCambioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObteneTipoDeCambio" />
+  </wsdl:message>
+  <wsdl:message name="ObteneTipoDeCambioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObteneTipoDeCambioResponse" />
+  </wsdl:message>
+  <wsdl:message name="tipo_Cliente_EliminaSoapIn">
+    <wsdl:part name="parameters" element="tns:tipo_Cliente_Elimina" />
+  </wsdl:message>
+  <wsdl:message name="tipo_Cliente_EliminaSoapOut">
+    <wsdl:part name="parameters" element="tns:tipo_Cliente_EliminaResponse" />
+  </wsdl:message>
+  <wsdl:message name="tipo_Cliente_EditaSoapIn">
+    <wsdl:part name="parameters" element="tns:tipo_Cliente_Edita" />
+  </wsdl:message>
+  <wsdl:message name="tipo_Cliente_EditaSoapOut">
+    <wsdl:part name="parameters" element="tns:tipo_Cliente_EditaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selecTablaSoapIn">
+    <wsdl:part name="parameters" element="tns:selecTabla" />
+  </wsdl:message>
+  <wsdl:message name="selecTablaSoapOut">
+    <wsdl:part name="parameters" element="tns:selecTablaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fun_EditaSoapIn">
+    <wsdl:part name="parameters" element="tns:Fun_Edita" />
+  </wsdl:message>
+  <wsdl:message name="Fun_EditaSoapOut">
+    <wsdl:part name="parameters" element="tns:Fun_EditaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fun_NuevoSoapIn">
+    <wsdl:part name="parameters" element="tns:Fun_Nuevo" />
+  </wsdl:message>
+  <wsdl:message name="Fun_NuevoSoapOut">
+    <wsdl:part name="parameters" element="tns:Fun_NuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fun_EliminaSoapIn">
+    <wsdl:part name="parameters" element="tns:Fun_Elimina" />
+  </wsdl:message>
+  <wsdl:message name="Fun_EliminaSoapOut">
+    <wsdl:part name="parameters" element="tns:Fun_EliminaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatGralsSoapIn">
+    <wsdl:part name="parameters" element="tns:CatGrals" />
+  </wsdl:message>
+  <wsdl:message name="CatGralsSoapOut">
+    <wsdl:part name="parameters" element="tns:CatGralsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TraeDatosConsultaSoapIn">
+    <wsdl:part name="parameters" element="tns:TraeDatosConsulta" />
+  </wsdl:message>
+  <wsdl:message name="TraeDatosConsultaSoapOut">
+    <wsdl:part name="parameters" element="tns:TraeDatosConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Grid_AltaSoapIn">
+    <wsdl:part name="parameters" element="tns:Grid_Alta" />
+  </wsdl:message>
+  <wsdl:message name="Grid_AltaSoapOut">
+    <wsdl:part name="parameters" element="tns:Grid_AltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Grid_EditaSoapIn">
+    <wsdl:part name="parameters" element="tns:Grid_Edita" />
+  </wsdl:message>
+  <wsdl:message name="Grid_EditaSoapOut">
+    <wsdl:part name="parameters" element="tns:Grid_EditaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Grid_EliminaSoapIn">
+    <wsdl:part name="parameters" element="tns:Grid_Elimina" />
+  </wsdl:message>
+  <wsdl:message name="Grid_EliminaSoapOut">
+    <wsdl:part name="parameters" element="tns:Grid_EliminaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fun_TemaSoapIn">
+    <wsdl:part name="parameters" element="tns:Fun_Tema" />
+  </wsdl:message>
+  <wsdl:message name="Fun_TemaSoapOut">
+    <wsdl:part name="parameters" element="tns:Fun_TemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_AltaSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_Alta" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_AltaSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_AltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_EliminaTmpSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_EliminaTmp" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_EliminaTmpSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_EliminaTmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_SelectGSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_SelectG" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_SelectGSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_SelectGResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_SelectGNoMSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_SelectGNoM" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_SelectGNoMSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_SelectGNoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_SelectFacNoAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_SelectFacNoAuto" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_SelectFacNoAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_SelectFacNoAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_EditarSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_Editar" />
+  </wsdl:message>
+  <wsdl:message name="FacturasSeg_EditarSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasSeg_EditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="MonitorGeneral_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:MonitorGeneral_Select" />
+  </wsdl:message>
+  <wsdl:message name="MonitorGeneral_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:MonitorGeneral_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatosFuncionalidaCobranzaSoapIn">
+    <wsdl:part name="parameters" element="tns:DatosFuncionalidaCobranza" />
+  </wsdl:message>
+  <wsdl:message name="DatosFuncionalidaCobranzaSoapOut">
+    <wsdl:part name="parameters" element="tns:DatosFuncionalidaCobranzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectEmpresasLFSoapIn">
+    <wsdl:part name="parameters" element="tns:selectEmpresasLF" />
+  </wsdl:message>
+  <wsdl:message name="selectEmpresasLFSoapOut">
+    <wsdl:part name="parameters" element="tns:selectEmpresasLFResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectMarcasSoapIn">
+    <wsdl:part name="parameters" element="tns:selectMarcas" />
+  </wsdl:message>
+  <wsdl:message name="selectMarcasSoapOut">
+    <wsdl:part name="parameters" element="tns:selectMarcasResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectMarcasLFSoapIn">
+    <wsdl:part name="parameters" element="tns:selectMarcasLF" />
+  </wsdl:message>
+  <wsdl:message name="selectMarcasLFSoapOut">
+    <wsdl:part name="parameters" element="tns:selectMarcasLFResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAseguradorasLFSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAseguradorasLF" />
+  </wsdl:message>
+  <wsdl:message name="selectAseguradorasLFSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAseguradorasLFResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAseguradorasSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAseguradoras" />
+  </wsdl:message>
+  <wsdl:message name="selectAseguradorasSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAseguradorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectValoresLFSoapIn">
+    <wsdl:part name="parameters" element="tns:selectValoresLF" />
+  </wsdl:message>
+  <wsdl:message name="selectValoresLFSoapOut">
+    <wsdl:part name="parameters" element="tns:selectValoresLFResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectTipoOperLFSoapIn">
+    <wsdl:part name="parameters" element="tns:selectTipoOperLF" />
+  </wsdl:message>
+  <wsdl:message name="selectTipoOperLFSoapOut">
+    <wsdl:part name="parameters" element="tns:selectTipoOperLFResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectFondeadorasSoapIn">
+    <wsdl:part name="parameters" element="tns:selectFondeadoras" />
+  </wsdl:message>
+  <wsdl:message name="selectFondeadorasSoapOut">
+    <wsdl:part name="parameters" element="tns:selectFondeadorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaParametros" />
+  </wsdl:message>
+  <wsdl:message name="InsertaParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateParametros" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectLineasFondeadorasSoapIn">
+    <wsdl:part name="parameters" element="tns:selectLineasFondeadoras" />
+  </wsdl:message>
+  <wsdl:message name="selectLineasFondeadorasSoapOut">
+    <wsdl:part name="parameters" element="tns:selectLineasFondeadorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectRemesasFondeoSoapIn">
+    <wsdl:part name="parameters" element="tns:selectRemesasFondeo" />
+  </wsdl:message>
+  <wsdl:message name="selectRemesasFondeoSoapOut">
+    <wsdl:part name="parameters" element="tns:selectRemesasFondeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectDetalleFondeoSoapIn">
+    <wsdl:part name="parameters" element="tns:selectDetalleFondeo" />
+  </wsdl:message>
+  <wsdl:message name="selectDetalleFondeoSoapOut">
+    <wsdl:part name="parameters" element="tns:selectDetalleFondeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectCreditosSoapIn">
+    <wsdl:part name="parameters" element="tns:selectCreditos" />
+  </wsdl:message>
+  <wsdl:message name="selectCreditosSoapOut">
+    <wsdl:part name="parameters" element="tns:selectCreditosResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectCreditosGarantiaSoapIn">
+    <wsdl:part name="parameters" element="tns:selectCreditosGarantia" />
+  </wsdl:message>
+  <wsdl:message name="selectCreditosGarantiaSoapOut">
+    <wsdl:part name="parameters" element="tns:selectCreditosGarantiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectCredReemplazoSoapIn">
+    <wsdl:part name="parameters" element="tns:selectCredReemplazo" />
+  </wsdl:message>
+  <wsdl:message name="selectCredReemplazoSoapOut">
+    <wsdl:part name="parameters" element="tns:selectCredReemplazoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaRemesaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaRemesa" />
+  </wsdl:message>
+  <wsdl:message name="InsertaRemesaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaRemesaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectDetalleRemesaSoapIn">
+    <wsdl:part name="parameters" element="tns:selectDetalleRemesa" />
+  </wsdl:message>
+  <wsdl:message name="selectDetalleRemesaSoapOut">
+    <wsdl:part name="parameters" element="tns:selectDetalleRemesaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnexosReemplazoDetSoapIn">
+    <wsdl:part name="parameters" element="tns:AnexosReemplazoDet" />
+  </wsdl:message>
+  <wsdl:message name="AnexosReemplazoDetSoapOut">
+    <wsdl:part name="parameters" element="tns:AnexosReemplazoDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Guarda_PedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:Guarda_Pedido" />
+  </wsdl:message>
+  <wsdl:message name="Guarda_PedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:Guarda_PedidoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FuncionalidadSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FrmGetMensajeError">
+      <wsdl:input message="tns:FrmGetMensajeErrorSoapIn" />
+      <wsdl:output message="tns:FrmGetMensajeErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaCatCampos">
+      <wsdl:input message="tns:ObtenEtiquetaCatCamposSoapIn" />
+      <wsdl:output message="tns:ObtenEtiquetaCatCamposSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaReporte">
+      <wsdl:input message="tns:ObtenEtiquetaReporteSoapIn" />
+      <wsdl:output message="tns:ObtenEtiquetaReporteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenWidth">
+      <wsdl:input message="tns:ObtenWidthSoapIn" />
+      <wsdl:output message="tns:ObtenWidthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametro">
+      <wsdl:input message="tns:ParametroSoapIn" />
+      <wsdl:output message="tns:ParametroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenIdTipoCampo">
+      <wsdl:input message="tns:ObtenIdTipoCampoSoapIn" />
+      <wsdl:output message="tns:ObtenIdTipoCampoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValidaDirecta">
+      <wsdl:input message="tns:ObtenValidaDirectaSoapIn" />
+      <wsdl:output message="tns:ObtenValidaDirectaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTblRelacionGen">
+      <wsdl:input message="tns:ObtenTblRelacionGenSoapIn" />
+      <wsdl:output message="tns:ObtenTblRelacionGenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenCatFormato">
+      <wsdl:input message="tns:ObtenCatFormatoSoapIn" />
+      <wsdl:output message="tns:ObtenCatFormatoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenObligatorio">
+      <wsdl:input message="tns:ObtenObligatorioSoapIn" />
+      <wsdl:output message="tns:ObtenObligatorioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTooltip">
+      <wsdl:input message="tns:ObtenTooltipSoapIn" />
+      <wsdl:output message="tns:ObtenTooltipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLongitud">
+      <wsdl:input message="tns:ObtenLongitudSoapIn" />
+      <wsdl:output message="tns:ObtenLongitudSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDataSet">
+      <wsdl:input message="tns:ObtenDataSetSoapIn" />
+      <wsdl:output message="tns:ObtenDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObteneTipoDeCambio">
+      <wsdl:input message="tns:ObteneTipoDeCambioSoapIn" />
+      <wsdl:output message="tns:ObteneTipoDeCambioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tipo_Cliente_Elimina">
+      <wsdl:input message="tns:tipo_Cliente_EliminaSoapIn" />
+      <wsdl:output message="tns:tipo_Cliente_EliminaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tipo_Cliente_Edita">
+      <wsdl:input message="tns:tipo_Cliente_EditaSoapIn" />
+      <wsdl:output message="tns:tipo_Cliente_EditaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selecTabla">
+      <wsdl:input message="tns:selecTablaSoapIn" />
+      <wsdl:output message="tns:selecTablaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Edita">
+      <wsdl:input message="tns:Fun_EditaSoapIn" />
+      <wsdl:output message="tns:Fun_EditaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Nuevo">
+      <wsdl:input message="tns:Fun_NuevoSoapIn" />
+      <wsdl:output message="tns:Fun_NuevoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Elimina">
+      <wsdl:input message="tns:Fun_EliminaSoapIn" />
+      <wsdl:output message="tns:Fun_EliminaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CatGrals">
+      <wsdl:input message="tns:CatGralsSoapIn" />
+      <wsdl:output message="tns:CatGralsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TraeDatosConsulta">
+      <wsdl:input message="tns:TraeDatosConsultaSoapIn" />
+      <wsdl:output message="tns:TraeDatosConsultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Alta">
+      <wsdl:input message="tns:Grid_AltaSoapIn" />
+      <wsdl:output message="tns:Grid_AltaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Edita">
+      <wsdl:input message="tns:Grid_EditaSoapIn" />
+      <wsdl:output message="tns:Grid_EditaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Elimina">
+      <wsdl:input message="tns:Grid_EliminaSoapIn" />
+      <wsdl:output message="tns:Grid_EliminaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Tema">
+      <wsdl:input message="tns:Fun_TemaSoapIn" />
+      <wsdl:output message="tns:Fun_TemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_Alta">
+      <wsdl:input message="tns:FacturasSeg_AltaSoapIn" />
+      <wsdl:output message="tns:FacturasSeg_AltaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_EliminaTmp">
+      <wsdl:input message="tns:FacturasSeg_EliminaTmpSoapIn" />
+      <wsdl:output message="tns:FacturasSeg_EliminaTmpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectG">
+      <wsdl:input message="tns:FacturasSeg_SelectGSoapIn" />
+      <wsdl:output message="tns:FacturasSeg_SelectGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectGNoM">
+      <wsdl:input message="tns:FacturasSeg_SelectGNoMSoapIn" />
+      <wsdl:output message="tns:FacturasSeg_SelectGNoMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectFacNoAuto">
+      <wsdl:input message="tns:FacturasSeg_SelectFacNoAutoSoapIn" />
+      <wsdl:output message="tns:FacturasSeg_SelectFacNoAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_Editar">
+      <wsdl:input message="tns:FacturasSeg_EditarSoapIn" />
+      <wsdl:output message="tns:FacturasSeg_EditarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MonitorGeneral_Select">
+      <wsdl:input message="tns:MonitorGeneral_SelectSoapIn" />
+      <wsdl:output message="tns:MonitorGeneral_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosFuncionalidaCobranza">
+      <wsdl:input message="tns:DatosFuncionalidaCobranzaSoapIn" />
+      <wsdl:output message="tns:DatosFuncionalidaCobranzaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectEmpresasLF">
+      <wsdl:input message="tns:selectEmpresasLFSoapIn" />
+      <wsdl:output message="tns:selectEmpresasLFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectMarcas">
+      <wsdl:input message="tns:selectMarcasSoapIn" />
+      <wsdl:output message="tns:selectMarcasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectMarcasLF">
+      <wsdl:input message="tns:selectMarcasLFSoapIn" />
+      <wsdl:output message="tns:selectMarcasLFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAseguradorasLF">
+      <wsdl:input message="tns:selectAseguradorasLFSoapIn" />
+      <wsdl:output message="tns:selectAseguradorasLFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAseguradoras">
+      <wsdl:input message="tns:selectAseguradorasSoapIn" />
+      <wsdl:output message="tns:selectAseguradorasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectValoresLF">
+      <wsdl:input message="tns:selectValoresLFSoapIn" />
+      <wsdl:output message="tns:selectValoresLFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectTipoOperLF">
+      <wsdl:input message="tns:selectTipoOperLFSoapIn" />
+      <wsdl:output message="tns:selectTipoOperLFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectFondeadoras">
+      <wsdl:input message="tns:selectFondeadorasSoapIn" />
+      <wsdl:output message="tns:selectFondeadorasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaParametros">
+      <wsdl:input message="tns:InsertaParametrosSoapIn" />
+      <wsdl:output message="tns:InsertaParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParametros">
+      <wsdl:input message="tns:UpdateParametrosSoapIn" />
+      <wsdl:output message="tns:UpdateParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectLineasFondeadoras">
+      <wsdl:input message="tns:selectLineasFondeadorasSoapIn" />
+      <wsdl:output message="tns:selectLineasFondeadorasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectRemesasFondeo">
+      <wsdl:input message="tns:selectRemesasFondeoSoapIn" />
+      <wsdl:output message="tns:selectRemesasFondeoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectDetalleFondeo">
+      <wsdl:input message="tns:selectDetalleFondeoSoapIn" />
+      <wsdl:output message="tns:selectDetalleFondeoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectCreditos">
+      <wsdl:input message="tns:selectCreditosSoapIn" />
+      <wsdl:output message="tns:selectCreditosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectCreditosGarantia">
+      <wsdl:input message="tns:selectCreditosGarantiaSoapIn" />
+      <wsdl:output message="tns:selectCreditosGarantiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectCredReemplazo">
+      <wsdl:input message="tns:selectCredReemplazoSoapIn" />
+      <wsdl:output message="tns:selectCredReemplazoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaRemesa">
+      <wsdl:input message="tns:InsertaRemesaSoapIn" />
+      <wsdl:output message="tns:InsertaRemesaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectDetalleRemesa">
+      <wsdl:input message="tns:selectDetalleRemesaSoapIn" />
+      <wsdl:output message="tns:selectDetalleRemesaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnexosReemplazoDet">
+      <wsdl:input message="tns:AnexosReemplazoDetSoapIn" />
+      <wsdl:output message="tns:AnexosReemplazoDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Guarda_Pedido">
+      <wsdl:input message="tns:Guarda_PedidoSoapIn" />
+      <wsdl:output message="tns:Guarda_PedidoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FuncionalidadSoap" type="tns:FuncionalidadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrmGetMensajeError">
+      <soap:operation soapAction="http://tempuri.org/FrmGetMensajeError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaCatCampos">
+      <soap:operation soapAction="http://tempuri.org/ObtenEtiquetaCatCampos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaReporte">
+      <soap:operation soapAction="http://tempuri.org/ObtenEtiquetaReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenWidth">
+      <soap:operation soapAction="http://tempuri.org/ObtenWidth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametro">
+      <soap:operation soapAction="http://tempuri.org/Parametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenIdTipoCampo">
+      <soap:operation soapAction="http://tempuri.org/ObtenIdTipoCampo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValidaDirecta">
+      <soap:operation soapAction="http://tempuri.org/ObtenValidaDirecta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTblRelacionGen">
+      <soap:operation soapAction="http://tempuri.org/ObtenTblRelacionGen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenCatFormato">
+      <soap:operation soapAction="http://tempuri.org/ObtenCatFormato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenObligatorio">
+      <soap:operation soapAction="http://tempuri.org/ObtenObligatorio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTooltip">
+      <soap:operation soapAction="http://tempuri.org/ObtenTooltip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLongitud">
+      <soap:operation soapAction="http://tempuri.org/ObtenLongitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDataSet">
+      <soap:operation soapAction="http://tempuri.org/ObtenDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObteneTipoDeCambio">
+      <soap:operation soapAction="http://tempuri.org/ObteneTipoDeCambio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipo_Cliente_Elimina">
+      <soap:operation soapAction="http://tempuri.org/tipo_Cliente_Elimina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipo_Cliente_Edita">
+      <soap:operation soapAction="http://tempuri.org/tipo_Cliente_Edita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selecTabla">
+      <soap:operation soapAction="http://tempuri.org/selecTabla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Edita">
+      <soap:operation soapAction="http://tempuri.org/Fun_Edita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Nuevo">
+      <soap:operation soapAction="http://tempuri.org/Fun_Nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Elimina">
+      <soap:operation soapAction="http://tempuri.org/Fun_Elimina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CatGrals">
+      <soap:operation soapAction="http://tempuri.org/CatGrals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraeDatosConsulta">
+      <soap:operation soapAction="http://tempuri.org/TraeDatosConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Alta">
+      <soap:operation soapAction="http://tempuri.org/Grid_Alta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Edita">
+      <soap:operation soapAction="http://tempuri.org/Grid_Edita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Elimina">
+      <soap:operation soapAction="http://tempuri.org/Grid_Elimina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Tema">
+      <soap:operation soapAction="http://tempuri.org/Fun_Tema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_Alta">
+      <soap:operation soapAction="http://tempuri.org/FacturasSeg_Alta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_EliminaTmp">
+      <soap:operation soapAction="http://tempuri.org/FacturasSeg_EliminaTmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectG">
+      <soap:operation soapAction="http://tempuri.org/FacturasSeg_SelectG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectGNoM">
+      <soap:operation soapAction="http://tempuri.org/FacturasSeg_SelectGNoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectFacNoAuto">
+      <soap:operation soapAction="http://tempuri.org/FacturasSeg_SelectFacNoAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_Editar">
+      <soap:operation soapAction="http://tempuri.org/FacturasSeg_Editar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonitorGeneral_Select">
+      <soap:operation soapAction="http://tempuri.org/MonitorGeneral_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosFuncionalidaCobranza">
+      <soap:operation soapAction="http://tempuri.org/DatosFuncionalidaCobranza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectEmpresasLF">
+      <soap:operation soapAction="http://tempuri.org/selectEmpresasLF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectMarcas">
+      <soap:operation soapAction="http://tempuri.org/selectMarcas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectMarcasLF">
+      <soap:operation soapAction="http://tempuri.org/selectMarcasLF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAseguradorasLF">
+      <soap:operation soapAction="http://tempuri.org/selectAseguradorasLF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAseguradoras">
+      <soap:operation soapAction="http://tempuri.org/selectAseguradoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectValoresLF">
+      <soap:operation soapAction="http://tempuri.org/selectValoresLF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectTipoOperLF">
+      <soap:operation soapAction="http://tempuri.org/selectTipoOperLF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectFondeadoras">
+      <soap:operation soapAction="http://tempuri.org/selectFondeadoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaParametros">
+      <soap:operation soapAction="http://tempuri.org/InsertaParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParametros">
+      <soap:operation soapAction="http://tempuri.org/UpdateParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectLineasFondeadoras">
+      <soap:operation soapAction="http://tempuri.org/selectLineasFondeadoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectRemesasFondeo">
+      <soap:operation soapAction="http://tempuri.org/selectRemesasFondeo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectDetalleFondeo">
+      <soap:operation soapAction="http://tempuri.org/selectDetalleFondeo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCreditos">
+      <soap:operation soapAction="http://tempuri.org/selectCreditos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCreditosGarantia">
+      <soap:operation soapAction="http://tempuri.org/selectCreditosGarantia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCredReemplazo">
+      <soap:operation soapAction="http://tempuri.org/selectCredReemplazo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaRemesa">
+      <soap:operation soapAction="http://tempuri.org/InsertaRemesa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectDetalleRemesa">
+      <soap:operation soapAction="http://tempuri.org/selectDetalleRemesa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnexosReemplazoDet">
+      <soap:operation soapAction="http://tempuri.org/AnexosReemplazoDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guarda_Pedido">
+      <soap:operation soapAction="http://tempuri.org/Guarda_Pedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FuncionalidadSoap12" type="tns:FuncionalidadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrmGetMensajeError">
+      <soap12:operation soapAction="http://tempuri.org/FrmGetMensajeError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaCatCampos">
+      <soap12:operation soapAction="http://tempuri.org/ObtenEtiquetaCatCampos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaReporte">
+      <soap12:operation soapAction="http://tempuri.org/ObtenEtiquetaReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenWidth">
+      <soap12:operation soapAction="http://tempuri.org/ObtenWidth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametro">
+      <soap12:operation soapAction="http://tempuri.org/Parametro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenIdTipoCampo">
+      <soap12:operation soapAction="http://tempuri.org/ObtenIdTipoCampo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValidaDirecta">
+      <soap12:operation soapAction="http://tempuri.org/ObtenValidaDirecta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTblRelacionGen">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTblRelacionGen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenCatFormato">
+      <soap12:operation soapAction="http://tempuri.org/ObtenCatFormato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenObligatorio">
+      <soap12:operation soapAction="http://tempuri.org/ObtenObligatorio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTooltip">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTooltip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLongitud">
+      <soap12:operation soapAction="http://tempuri.org/ObtenLongitud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDataSet">
+      <soap12:operation soapAction="http://tempuri.org/ObtenDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObteneTipoDeCambio">
+      <soap12:operation soapAction="http://tempuri.org/ObteneTipoDeCambio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipo_Cliente_Elimina">
+      <soap12:operation soapAction="http://tempuri.org/tipo_Cliente_Elimina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipo_Cliente_Edita">
+      <soap12:operation soapAction="http://tempuri.org/tipo_Cliente_Edita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selecTabla">
+      <soap12:operation soapAction="http://tempuri.org/selecTabla" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Edita">
+      <soap12:operation soapAction="http://tempuri.org/Fun_Edita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Nuevo">
+      <soap12:operation soapAction="http://tempuri.org/Fun_Nuevo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Elimina">
+      <soap12:operation soapAction="http://tempuri.org/Fun_Elimina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CatGrals">
+      <soap12:operation soapAction="http://tempuri.org/CatGrals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraeDatosConsulta">
+      <soap12:operation soapAction="http://tempuri.org/TraeDatosConsulta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Alta">
+      <soap12:operation soapAction="http://tempuri.org/Grid_Alta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Edita">
+      <soap12:operation soapAction="http://tempuri.org/Grid_Edita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grid_Elimina">
+      <soap12:operation soapAction="http://tempuri.org/Grid_Elimina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fun_Tema">
+      <soap12:operation soapAction="http://tempuri.org/Fun_Tema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_Alta">
+      <soap12:operation soapAction="http://tempuri.org/FacturasSeg_Alta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_EliminaTmp">
+      <soap12:operation soapAction="http://tempuri.org/FacturasSeg_EliminaTmp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectG">
+      <soap12:operation soapAction="http://tempuri.org/FacturasSeg_SelectG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectGNoM">
+      <soap12:operation soapAction="http://tempuri.org/FacturasSeg_SelectGNoM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_SelectFacNoAuto">
+      <soap12:operation soapAction="http://tempuri.org/FacturasSeg_SelectFacNoAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasSeg_Editar">
+      <soap12:operation soapAction="http://tempuri.org/FacturasSeg_Editar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonitorGeneral_Select">
+      <soap12:operation soapAction="http://tempuri.org/MonitorGeneral_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosFuncionalidaCobranza">
+      <soap12:operation soapAction="http://tempuri.org/DatosFuncionalidaCobranza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectEmpresasLF">
+      <soap12:operation soapAction="http://tempuri.org/selectEmpresasLF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectMarcas">
+      <soap12:operation soapAction="http://tempuri.org/selectMarcas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectMarcasLF">
+      <soap12:operation soapAction="http://tempuri.org/selectMarcasLF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAseguradorasLF">
+      <soap12:operation soapAction="http://tempuri.org/selectAseguradorasLF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAseguradoras">
+      <soap12:operation soapAction="http://tempuri.org/selectAseguradoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectValoresLF">
+      <soap12:operation soapAction="http://tempuri.org/selectValoresLF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectTipoOperLF">
+      <soap12:operation soapAction="http://tempuri.org/selectTipoOperLF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectFondeadoras">
+      <soap12:operation soapAction="http://tempuri.org/selectFondeadoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaParametros">
+      <soap12:operation soapAction="http://tempuri.org/InsertaParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParametros">
+      <soap12:operation soapAction="http://tempuri.org/UpdateParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectLineasFondeadoras">
+      <soap12:operation soapAction="http://tempuri.org/selectLineasFondeadoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectRemesasFondeo">
+      <soap12:operation soapAction="http://tempuri.org/selectRemesasFondeo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectDetalleFondeo">
+      <soap12:operation soapAction="http://tempuri.org/selectDetalleFondeo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCreditos">
+      <soap12:operation soapAction="http://tempuri.org/selectCreditos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCreditosGarantia">
+      <soap12:operation soapAction="http://tempuri.org/selectCreditosGarantia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCredReemplazo">
+      <soap12:operation soapAction="http://tempuri.org/selectCredReemplazo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaRemesa">
+      <soap12:operation soapAction="http://tempuri.org/InsertaRemesa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectDetalleRemesa">
+      <soap12:operation soapAction="http://tempuri.org/selectDetalleRemesa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnexosReemplazoDet">
+      <soap12:operation soapAction="http://tempuri.org/AnexosReemplazoDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guarda_Pedido">
+      <soap12:operation soapAction="http://tempuri.org/Guarda_Pedido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Funcionalidad">
+    <wsdl:port name="FuncionalidadSoap" binding="tns:FuncionalidadSoap">
+      <soap:address location="http://localhost:61291/Funcionalidad.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FuncionalidadSoap12" binding="tns:FuncionalidadSoap12">
+      <soap12:address location="http://localhost:61291/Funcionalidad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

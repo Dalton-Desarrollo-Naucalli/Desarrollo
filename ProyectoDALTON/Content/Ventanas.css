@@ -1,0 +1,126 @@
+﻿body {
+}
+
+.MenuVentanas
+{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  background-color: White;
+  color: Black;
+}
+
+ .dxmMenu
+{
+
+   
+    border-top: 2px solid #b2b2b2;
+    border-bottom: 2px solid #b2b2b2;
+    position: relative;
+}
+
+.dxmMenu a,
+.dxmSubMenu a
+{
+     color: #ffffff;      /*Sub Fonts */
+     text-decoration: none;
+
+      }
+
+      
+      
+      
+.dxmMenuItem
+{
+     font: 14pt Verdana; /*Main Fonts */
+     color: #ffffff;
+     white-space: nowrap;
+     
+}
+     
+.dxmMenuItemHover
+
+{
+
+       border: solid 0px;
+
+}
+
+.dxmMenuItem
+{
+      padding: 4px 20px; /*Main Menu Padding */
+
+}
+
+.dxmMenuItemHover
+{
+     padding: 4px 20px; /*Main Menu Padding Hover */
+
+}
+.dxmSubMenuItemHover a,
+.dxmSubMenuItemHoverWithImage a,
+.dxmSubMenuItemHoverWithPopOutImage a,
+.dxmSubMenuItemHoverWithImageWithPopOutImage a,
+.dxmSubMenuRtlItemHover a,
+.dxmSubMenuRtlItemHoverWithImage
+{
+     background-color: LightGray; /*Sub Menu Hover highlight */
+     color: #800517;
+}
+
+.dxmSubMenuGutter,
+.dxmSubMenuRtlGutter
+{
+     background-color: #000000; 
+          /*background: url(../images/layout/mainNavBg.jpg) repeat;*/
+          
+}
+
+.dxmSubMenuItem,
+.dxmSubMenuItemWithImage,
+.dxmSubMenuItemWithPopOutImage,
+.dxmSubMenuItemWithImageWithPopOutImage,
+.dxmSubMenuRtlItem,
+.dxmSubMenuRtlItemWithImage
+{
+     font: 14pt Verdana;
+     color: #ffffff; /*1st level Sub Fonts */
+     white-space: nowrap;
+     text-align: left;
+    background-color: #44484b;
+     
+}
+
+.dxmSubMenuItemHover,
+.dxmSubMenuItemHoverWithImage,
+.dxmSubMenuItemHoverWithPopOutImage,
+.dxmSubMenuItemHoverWithImageWithPopOutImage,
+.dxmSubMenuRtlItemHover,
+.dxmSubMenuRtlItemHoverWithImage
+{
+     background-color: LightGray; /*Sub Menu Hover highlight */
+     color: #800517;
+}
+
+.dxmSubMenuItemSpacing,
+.dxmSubMenuItemSeparatorSpacing 
+{
+     height: 1px; /*Sub Menu item Height spacing */
+
+}
+
+.dxmVerticalMenuItemLeftImageSpacing,
+.dxmVerticalMenuItemRightImageSpacing,
+.dxmSubMenuItemImageSpacing
+{
+     width: 1px; /*Sub Menu item Padding spacing */
+     padding-left: 0px !important;
+     padding-right: 0px !important;
+     border-left-width: 0px !important; 
+     border-right-width: 0px !important;
+      
+}
+.dxmSubMenuItemImageSpacing div
+{
+     width: 7px; /*Sub Menu item width spacing */
+     height: 1px;
+}

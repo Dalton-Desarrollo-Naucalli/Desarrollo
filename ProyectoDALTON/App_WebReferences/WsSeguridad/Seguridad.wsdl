@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ValidaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClave" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sSistema" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrmGetMensajeError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrmGetMensajeErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FrmGetMensajeErrorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDatosCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDatosCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenDatosCatalogoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametros" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaCatalogoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametros" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaCatalogoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametros" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminaCatalogoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaRelacionCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LlavePadre" />
+            <s:element minOccurs="0" maxOccurs="1" name="LlaveHija" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaRelacionCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaRelacionCatalogoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenInfCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenInfCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenInfCatalogoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaNoDeIntentosUsuarioSistema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="varID_Usuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="varID_Sistema" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Funcionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaNoDeIntentosUsuarioSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaNoDeIntentosUsuarioSistemaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaStatusUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="varID_Usuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="varID_Sistema" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="varStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="varFuncionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaStatusUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaStatusUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaPassUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="varID_Usuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="varPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaPassUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaPassUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenPassUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Usuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenPassUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenPassUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Usuario_SIAN" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Perfil" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario_Registro" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha_Inicio" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha_Termino" />
+            <s:element minOccurs="0" maxOccurs="1" name="Estatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="DebeCambiarPassword" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreaUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenMenusUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Sistema" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Modulo" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenMenusUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenMenusUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpObtenSubmenus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Sistema" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Modulo" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Menu" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpObtenSubmenusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OpObtenSubmenusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpObtenOpcionesSubenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Sistema" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Modulo" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Menu" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Submenu" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpObtenOpcionesSubenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OpObtenOpcionesSubenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpObtenAccesosOpcionesSubenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Sistema" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Menu" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Submenu" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Opcion" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpObtenAccesosOpcionesSubenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OpObtenAccesosOpcionesSubenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpVerificaAccesosFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Usuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="txtFormulario" />
+            <s:element minOccurs="0" maxOccurs="1" name="wsConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpVerificaAccesosFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OpVerificaAccesosFormularioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ValidaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="FrmGetMensajeErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:FrmGetMensajeError" />
+  </wsdl:message>
+  <wsdl:message name="FrmGetMensajeErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:FrmGetMensajeErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDatosCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenDatosCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDatosCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenDatosCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="InsertaCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminaCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminaCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="EliminaCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminaCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaRelacionCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaRelacionCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaRelacionCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaRelacionCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenInfCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenInfCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenInfCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenInfCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaNoDeIntentosUsuarioSistemaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaNoDeIntentosUsuarioSistema" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaNoDeIntentosUsuarioSistemaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaNoDeIntentosUsuarioSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaStatusUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaStatusUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaStatusUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaStatusUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaPassUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaPassUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaPassUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaPassUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenPassUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenPassUsuario" />
+  </wsdl:message>
+  <wsdl:message name="obtenPassUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenPassUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CreaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="CreaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CreaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenMenusUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenMenusUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenMenusUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenMenusUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpObtenSubmenusSoapIn">
+    <wsdl:part name="parameters" element="tns:OpObtenSubmenus" />
+  </wsdl:message>
+  <wsdl:message name="OpObtenSubmenusSoapOut">
+    <wsdl:part name="parameters" element="tns:OpObtenSubmenusResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpObtenOpcionesSubenuSoapIn">
+    <wsdl:part name="parameters" element="tns:OpObtenOpcionesSubenu" />
+  </wsdl:message>
+  <wsdl:message name="OpObtenOpcionesSubenuSoapOut">
+    <wsdl:part name="parameters" element="tns:OpObtenOpcionesSubenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpObtenAccesosOpcionesSubenuSoapIn">
+    <wsdl:part name="parameters" element="tns:OpObtenAccesosOpcionesSubenu" />
+  </wsdl:message>
+  <wsdl:message name="OpObtenAccesosOpcionesSubenuSoapOut">
+    <wsdl:part name="parameters" element="tns:OpObtenAccesosOpcionesSubenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpVerificaAccesosFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:OpVerificaAccesosFormulario" />
+  </wsdl:message>
+  <wsdl:message name="OpVerificaAccesosFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:OpVerificaAccesosFormularioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SeguridadSoap">
+    <wsdl:operation name="ValidaUsuario">
+      <wsdl:input message="tns:ValidaUsuarioSoapIn" />
+      <wsdl:output message="tns:ValidaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FrmGetMensajeError">
+      <wsdl:input message="tns:FrmGetMensajeErrorSoapIn" />
+      <wsdl:output message="tns:FrmGetMensajeErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatosCatalogo">
+      <wsdl:input message="tns:ObtenDatosCatalogoSoapIn" />
+      <wsdl:output message="tns:ObtenDatosCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCatalogo">
+      <wsdl:input message="tns:ActualizaCatalogoSoapIn" />
+      <wsdl:output message="tns:ActualizaCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCatalogo">
+      <wsdl:input message="tns:InsertaCatalogoSoapIn" />
+      <wsdl:output message="tns:InsertaCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCatalogo">
+      <wsdl:input message="tns:EliminaCatalogoSoapIn" />
+      <wsdl:output message="tns:EliminaCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDataSet">
+      <wsdl:input message="tns:ObtenDataSetSoapIn" />
+      <wsdl:output message="tns:ObtenDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaRelacionCatalogo">
+      <wsdl:input message="tns:ActualizaRelacionCatalogoSoapIn" />
+      <wsdl:output message="tns:ActualizaRelacionCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenInfCatalogo">
+      <wsdl:input message="tns:ObtenInfCatalogoSoapIn" />
+      <wsdl:output message="tns:ObtenInfCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaNoDeIntentosUsuarioSistema">
+      <wsdl:input message="tns:ActualizaNoDeIntentosUsuarioSistemaSoapIn" />
+      <wsdl:output message="tns:ActualizaNoDeIntentosUsuarioSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaStatusUsuario">
+      <wsdl:input message="tns:ActualizaStatusUsuarioSoapIn" />
+      <wsdl:output message="tns:ActualizaStatusUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPassUsuario">
+      <wsdl:input message="tns:ActualizaPassUsuarioSoapIn" />
+      <wsdl:output message="tns:ActualizaPassUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenPassUsuario">
+      <wsdl:input message="tns:obtenPassUsuarioSoapIn" />
+      <wsdl:output message="tns:obtenPassUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreaUsuario">
+      <wsdl:input message="tns:CreaUsuarioSoapIn" />
+      <wsdl:output message="tns:CreaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenMenusUsuario">
+      <wsdl:input message="tns:ObtenMenusUsuarioSoapIn" />
+      <wsdl:output message="tns:ObtenMenusUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenSubmenus">
+      <wsdl:input message="tns:OpObtenSubmenusSoapIn" />
+      <wsdl:output message="tns:OpObtenSubmenusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenOpcionesSubenu">
+      <wsdl:input message="tns:OpObtenOpcionesSubenuSoapIn" />
+      <wsdl:output message="tns:OpObtenOpcionesSubenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenAccesosOpcionesSubenu">
+      <wsdl:input message="tns:OpObtenAccesosOpcionesSubenuSoapIn" />
+      <wsdl:output message="tns:OpObtenAccesosOpcionesSubenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OpVerificaAccesosFormulario">
+      <wsdl:input message="tns:OpVerificaAccesosFormularioSoapIn" />
+      <wsdl:output message="tns:OpVerificaAccesosFormularioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SeguridadSoap" type="tns:SeguridadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrmGetMensajeError">
+      <soap:operation soapAction="http://tempuri.org/FrmGetMensajeError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatosCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ObtenDatosCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ActualizaCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCatalogo">
+      <soap:operation soapAction="http://tempuri.org/InsertaCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCatalogo">
+      <soap:operation soapAction="http://tempuri.org/EliminaCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDataSet">
+      <soap:operation soapAction="http://tempuri.org/ObtenDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaRelacionCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ActualizaRelacionCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenInfCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ObtenInfCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaNoDeIntentosUsuarioSistema">
+      <soap:operation soapAction="http://tempuri.org/ActualizaNoDeIntentosUsuarioSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaStatusUsuario">
+      <soap:operation soapAction="http://tempuri.org/ActualizaStatusUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPassUsuario">
+      <soap:operation soapAction="http://tempuri.org/ActualizaPassUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenPassUsuario">
+      <soap:operation soapAction="http://tempuri.org/obtenPassUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreaUsuario">
+      <soap:operation soapAction="http://tempuri.org/CreaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenMenusUsuario">
+      <soap:operation soapAction="http://tempuri.org/ObtenMenusUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenSubmenus">
+      <soap:operation soapAction="http://tempuri.org/OpObtenSubmenus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenOpcionesSubenu">
+      <soap:operation soapAction="http://tempuri.org/OpObtenOpcionesSubenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenAccesosOpcionesSubenu">
+      <soap:operation soapAction="http://tempuri.org/OpObtenAccesosOpcionesSubenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpVerificaAccesosFormulario">
+      <soap:operation soapAction="http://tempuri.org/OpVerificaAccesosFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SeguridadSoap12" type="tns:SeguridadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrmGetMensajeError">
+      <soap12:operation soapAction="http://tempuri.org/FrmGetMensajeError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatosCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/ObtenDatosCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/InsertaCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/EliminaCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDataSet">
+      <soap12:operation soapAction="http://tempuri.org/ObtenDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaRelacionCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaRelacionCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenInfCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/ObtenInfCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaNoDeIntentosUsuarioSistema">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaNoDeIntentosUsuarioSistema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaStatusUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaStatusUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPassUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaPassUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenPassUsuario">
+      <soap12:operation soapAction="http://tempuri.org/obtenPassUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/CreaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenMenusUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ObtenMenusUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenSubmenus">
+      <soap12:operation soapAction="http://tempuri.org/OpObtenSubmenus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenOpcionesSubenu">
+      <soap12:operation soapAction="http://tempuri.org/OpObtenOpcionesSubenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpObtenAccesosOpcionesSubenu">
+      <soap12:operation soapAction="http://tempuri.org/OpObtenAccesosOpcionesSubenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpVerificaAccesosFormulario">
+      <soap12:operation soapAction="http://tempuri.org/OpVerificaAccesosFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Seguridad">
+    <wsdl:port name="SeguridadSoap" binding="tns:SeguridadSoap">
+      <soap:address location="http://localhost:61291/Seguridad.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SeguridadSoap12" binding="tns:SeguridadSoap12">
+      <soap12:address location="http://localhost:61291/Seguridad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
